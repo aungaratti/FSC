@@ -1,3 +1,5 @@
+; usando um registrador para guardar o resultado da subtração.
+
 main
 	ldw r1,a
 	ldw r2,b 
