@@ -1,0 +1,10 @@
+main
+	ldw r1,a
+	ldw r2,b 
+	sub r3,r1,r2
+	stw r3,c 
+	hcf
+
+a	2
+b	1
+c	0
