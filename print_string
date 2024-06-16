@@ -1,0 +1,31 @@
+;Printa cada letra até formar frases completas
+
+main 
+	ldi r2,str1
+	ldi r3,abacate
+	bnz r7,print
+
+abacate
+	ldi r2,str2
+	ldi r3,banana
+	bnz r7,print
+
+banana
+	ldi r2,str3
+	ldi r3,final
+	bnz r7,print
+
+final
+	hcf
+
+print
+loop
+	ldb r1,r2
+	stw r1,0xf000
+	add r2,1
+	bnz r1,loop
+	bnz r7,r3
+
+str1	"Lorem ipsum dolor\n"
+str2	"Sed  hendrerit justo\n"
+str3	"Vivamus a orci   convallis sapien"
